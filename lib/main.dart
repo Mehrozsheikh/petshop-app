@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:petshop/ui/splash/splash_screen.dart';
+
+void main() {
+  runApp(const MyApp(
+    key: Key("MyApp"),
+  ));
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GetMaterialApp(
+      title: "Pet Shop",
+      locale: Get.deviceLocale,
+      getPages: [
+        GetPage(
+          name: "/",
+          page: () => const Splash(
+            key: Key("Splash"),
+          ),
+        ),
+      ],
+    );
+  }
+}

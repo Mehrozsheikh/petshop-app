@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:petshop/screens/screens_list.dart';
 import 'package:petshop/ui/splash/splash_screen.dart';
 
 void main() {
@@ -20,9 +21,7 @@ class MyApp extends StatelessWidget {
       getPages: [
         GetPage(
           name: "/",
-          page: () => const Splash(
-            key: Key("Splash"),
-          ),
+          page: () => Screens.splash,
         ),
       ],
     );

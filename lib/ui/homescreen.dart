@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:petshop/values/custom_colors.dart';
+import 'package:petshop/values/image_list.dart';
 import 'package:petshop/values/strings.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -18,7 +19,7 @@ class HomeScreen extends StatelessWidget {
         elevation: 0.0,
         leading: const Padding(
           padding: EdgeInsets.only(left: 8.0),
-          child: Image(image: AssetImage('assets/profile.jpeg')),
+          child: Image(image: AssetImage(ImageList.profile)),
         ),
         title: ListTile(
           dense: true,
@@ -28,7 +29,7 @@ class HomeScreen extends StatelessWidget {
             style: GoogleFonts.lato(color: Colors.black45, fontSize: 16),
           ),
           subtitle: Text(
-            "Mehroz Sheikh",
+            Strings.name,
             style: GoogleFonts.lato(
               color: ColorsList.textcolor,
               fontSize: 20,

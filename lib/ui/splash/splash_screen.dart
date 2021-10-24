@@ -4,7 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:petshop/ui/splash/homescreen.dart';
+import 'package:petshop/screens/screens_list.dart';
+import 'package:petshop/ui/homescreen.dart';
 import 'package:petshop/values/values.dart';
 
 class Splash extends StatefulWidget {
@@ -17,7 +18,7 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 3), () => Get.off(const HomeScreen()));
+    Timer(const Duration(seconds: 3), () => Get.off(Screens.home));
 
     super.initState();
   }

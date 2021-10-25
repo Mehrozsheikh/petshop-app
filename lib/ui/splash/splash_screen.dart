@@ -1,11 +1,9 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:petshop/screens/screens_list.dart';
-import 'package:petshop/ui/homescreen.dart';
 import 'package:petshop/values/values.dart';
 
 class Splash extends StatefulWidget {

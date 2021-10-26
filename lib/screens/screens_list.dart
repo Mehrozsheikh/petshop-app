@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:petshop/ui/homescreen.dart';
+import 'package:petshop/ui/homescreen/homescreen.dart';
 import 'package:petshop/ui/splash/splash_screen.dart';
 
 class Screens {

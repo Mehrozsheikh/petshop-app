@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:petshop/common_widgets/rating.dart';
-import 'package:petshop/values/values.dart';
 
 // ignore: must_be_immutable
 class RecommendedBox extends StatelessWidget {
@@ -23,53 +22,75 @@ class RecommendedBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 13.0, top: 30),
-      child: Container(
-        width: 300,
-        height: 170,
-        decoration: BoxDecoration(
-          color: color,
-          borderRadius: const BorderRadius.all(
-            Radius.circular(10),
-          ),
-          image: DecorationImage(
-            scale: 2,
-            alignment: Alignment.centerRight,
-            image: AssetImage(url),
-          ),
-        ),
-        child: Center(
-          child: ListTile(
-            title: Text(title,
-                style: GoogleFonts.lato(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold)),
-            subtitle: Row(
-              children: [
-                Text(
-                  ratingt,
-                  style: GoogleFonts.lato(
-                    color: Colors.white,
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+    return SizedBox(
+      height: 205,
+      width: 300,
+      child: Stack(
+        children: [
+          Positioned(
+            child: Card(
+              color: color,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(left: 20.0),
+                    child: Text(title,
+                        style: GoogleFonts.lato(
+                            color: Colors.white,
+                            fontSize: 19,
+                            fontWeight: FontWeight.bold)),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 4.0),
-                  child: IconTheme(
-                    data: const IconThemeData(
-                      color: Colors.white,
-                      size: 24,
-                    ),
-                    child: StarDisplay(value: rating),
+                  Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 20.0),
+                        child: Text(
+                          ratingt,
+                          style: GoogleFonts.lato(
+                            color: Colors.white,
+                            fontSize: 16,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 4.0),
+                        child: IconTheme(
+                          data: const IconThemeData(
+                            color: Colors.white,
+                            size: 20,
+                          ),
+                          child: StarDisplay(value: rating),
+                        ),
+                      ),
+                    ],
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
+            top: 30,
+            left: 3,
+            right: 3,
+            bottom: 0,
           ),
-        ),
+          Positioned(
+            right: 0,
+            child: Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+                constraints:
+                    const BoxConstraints.expand(width: 180, height: 180),
+                decoration: BoxDecoration(
+                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  image: DecorationImage(
+                      image: AssetImage(url), alignment: Alignment.centerRight),
+                ),
+              ),
+            ),
+          )
+        ],
       ),
     );
   }

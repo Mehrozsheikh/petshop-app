@@ -153,6 +153,7 @@ class HomeScreen extends StatelessWidget {
               scrollDirection: Axis.horizontal,
               child: Row(
                 children: [
+                  const SizedBox(width: 10),
                   RecommendedBox(
                     title: "Havanese Dog",
                     rating: 5,
@@ -182,14 +183,14 @@ class HomeScreen extends StatelessWidget {
                     color: Colors.redAccent,
                   ),
                   RecommendedBox(
-                    title: "Abyssinian  Cat",
+                    title: "Bengal  Cat",
                     rating: 4,
                     ratingt: "4.0",
                     url: "assets/cat3.jpeg",
                     color: Colors.green,
                   ),
                   RecommendedBox(
-                    title: "Beveren Rabbits",
+                    title: "Bunny Rabbits",
                     rating: 4,
                     ratingt: "4.0",
                     url: "assets/rabbit1.jpeg",

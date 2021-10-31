@@ -8,7 +8,6 @@ class RecommendedBox extends StatelessWidget {
   Color color = Colors.black;
   String url = "abc";
   String ratingt = "5";
-
   int rating = 5;
 
   RecommendedBox({
@@ -81,9 +80,9 @@ class RecommendedBox extends StatelessWidget {
               padding: const EdgeInsets.all(8.0),
               child: Container(
                 constraints:
-                    const BoxConstraints.expand(width: 180, height: 180),
+                    const BoxConstraints.expand(width: 190, height: 190),
                 decoration: BoxDecoration(
-                  borderRadius: const BorderRadius.all(Radius.circular(20)),
+                  borderRadius: const BorderRadius.all(Radius.circular(30)),
                   image: DecorationImage(
                       image: AssetImage(url), alignment: Alignment.centerRight),
                 ),

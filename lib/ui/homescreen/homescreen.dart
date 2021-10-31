@@ -2,14 +2,21 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:petshop/models/categories.dart';
-import 'package:petshop/models/recommended.dart';
+import 'package:petshop/models/listcomponent.dart';
+import 'package:petshop/ui/categories.dart';
+import 'package:petshop/ui/homescreen/recommended.dart';
+import 'package:petshop/ui/petlist/petlist.dart';
 import 'package:petshop/values/image_list.dart';
 import 'package:petshop/values/values.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -209,7 +216,44 @@ class HomeScreen extends StatelessWidget {
                   fontWeight: FontWeight.w700,
                 ),
               ),
+              trailing: InkWell(
+                child: const Text("See All"),
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const PetList()),
+                  );
+                },
+              ),
             ),
+            ListComponent(
+              title: 'Havanese Dog',
+              age: "1 Years Old",
+              price: "\$475",
+              url: "assets/dog1.jpeg",
+              ratingt: "5.0",
+              rating: 5,
+              key: UniqueKey(),
+            ),
+            ListComponent(
+              title: 'Australian Dog',
+              age: "1 Years Old",
+              price: "\$350",
+              url: "assets/dog2.jpeg",
+              ratingt: "5.0",
+              rating: 5,
+              key: UniqueKey(),
+            ),
+            ListComponent(
+              title: 'Havanese Cat',
+              age: "1 Years Old",
+              price: "\$235",
+              url: "assets/cat1.jpeg",
+              ratingt: "4.0",
+              rating: 4,
+              key: UniqueKey(),
+            ),
+            const SizedBox(height: 130),
           ],
         ),
       ),

@@ -52,7 +52,7 @@ class ListComponent extends StatelessWidget {
                 Text(
                   title,
                   style: GoogleFonts.lato(
-                    fontSize: 20,
+                    fontSize: 19,
                     fontWeight: FontWeight.w900,
                     color: ColorsList.textcolor,
                   ),
@@ -60,7 +60,7 @@ class ListComponent extends StatelessWidget {
                 Text(
                   age,
                   style: GoogleFonts.lato(
-                    fontSize: 18,
+                    fontSize: 16,
                     color: Colors.black87,
                   ),
                 ),
@@ -69,7 +69,7 @@ class ListComponent extends StatelessWidget {
                     Text(
                       ratingt,
                       style: const TextStyle(
-                        fontSize: 17,
+                        fontSize: 16,
                         fontWeight: FontWeight.bold,
                       ),
                     ),
@@ -88,13 +88,13 @@ class ListComponent extends StatelessWidget {
               ],
             ),
             trailing: Padding(
-              padding: const EdgeInsets.only(top: 16.0),
+              padding: const EdgeInsets.only(top: 17.0),
               child: Text(
                 price,
                 style: const TextStyle(
                   color: Colors.black,
-                  fontSize: 30,
-                  fontWeight: FontWeight.w900,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
                 ),
               ),
             ),

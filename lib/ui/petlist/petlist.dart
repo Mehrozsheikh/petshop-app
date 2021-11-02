@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:petshop/common_widgets/bottomnavbar.dart';
 import 'package:petshop/models/listcomponent.dart';
 import 'package:petshop/models/listmodel.dart';
-import 'package:petshop/ui/homescreen/homescreen.dart';
+import 'package:petshop/ui/petdetail/petdetail.dart';
 import 'package:petshop/values/custom_colors.dart';
 
 // ignore: must_be_immutable
@@ -17,7 +18,7 @@ class PetList extends StatefulWidget {
 List<ImageModel> listImages = [
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -25,7 +26,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -33,7 +34,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -41,7 +42,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -49,7 +50,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -57,7 +58,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -65,7 +66,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -73,7 +74,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -81,7 +82,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -89,7 +90,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -97,7 +98,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -105,7 +106,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -113,7 +114,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -121,7 +122,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -129,7 +130,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -137,7 +138,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -145,7 +146,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -153,7 +154,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -161,7 +162,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -169,7 +170,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -177,7 +178,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -185,7 +186,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -193,7 +194,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -201,7 +202,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -209,7 +210,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -217,7 +218,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -225,7 +226,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -233,7 +234,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -241,7 +242,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -249,7 +250,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -257,7 +258,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$475",
     url: "assets/dog1.jpeg",
     ratingt: "5.0",
@@ -265,7 +266,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Australian Dog',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$350",
     url: "assets/dog2.jpeg",
     ratingt: "5.0",
@@ -273,7 +274,7 @@ List<ImageModel> listImages = [
   ),
   ImageModel(
     title: 'Havanese Cat',
-    age: "1 Years Old",
+    age: "1 Years Old - Boys",
     price: "\$235",
     url: "assets/cat1.jpeg",
     ratingt: "4.0",
@@ -300,10 +301,7 @@ class _PetListState extends State<PetList> {
               size: 30,
             ),
             onTap: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => const HomeScreen()),
-              );
+              Navigator.pop(context);
             },
           ),
         ),
@@ -327,38 +325,7 @@ class _PetListState extends State<PetList> {
           )
         ],
       ),
-      bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(25), topLeft: Radius.circular(25)),
-          boxShadow: [
-            BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 4),
-          ],
-        ),
-        child: ClipRRect(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(25.0),
-            topRight: Radius.circular(25.0),
-          ),
-          child: BottomNavigationBar(
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            type: BottomNavigationBarType.fixed,
-            selectedItemColor: ColorsList.textcolor,
-            iconSize: 30,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.home_outlined), label: ('Home')),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.backpack_outlined), label: ('Cart')),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.note_alt_outlined), label: ('List')),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.person_outline), label: ('Account')),
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar: const BottomNavBar(),
       body: Center(
         child: Column(
           children: [
@@ -386,14 +353,35 @@ class _PetListState extends State<PetList> {
                 itemCount: listImages.length,
                 itemBuilder: (BuildContext context, int index) {
                   return Center(
-                    child: ListComponent(
-                      title: listImages[index].title,
-                      age: listImages[index].age,
-                      price: listImages[index].price,
-                      url: listImages[index].url,
-                      ratingt: listImages[index].ratingt,
-                      rating: listImages[index].rating,
-                      key: UniqueKey(),
+                    child: InkWell(
+                      splashColor: Colors.transparent,
+                      hoverColor: Colors.transparent,
+                      highlightColor: Colors.transparent,
+                      child: ListComponent(
+                        title: listImages[index].title,
+                        age: listImages[index].age,
+                        price: listImages[index].price,
+                        url: listImages[index].url,
+                        ratingt: listImages[index].ratingt,
+                        rating: listImages[index].rating,
+                        key: UniqueKey(),
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => PetDetail(
+                              title: listImages[index].title,
+                              age: listImages[index].age,
+                              price: listImages[index].price,
+                              url: listImages[index].url,
+                              ratingt: listImages[index].ratingt,
+                              rating: listImages[index].rating,
+                              key: UniqueKey(),
+                            ),
+                          ),
+                        );
+                      },
                     ),
                   );
                 },

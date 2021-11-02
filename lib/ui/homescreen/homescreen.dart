@@ -2,9 +2,11 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:petshop/common_widgets/bottomnavbar.dart';
 import 'package:petshop/models/listcomponent.dart';
 import 'package:petshop/ui/categories.dart';
 import 'package:petshop/ui/homescreen/recommended.dart';
+import 'package:petshop/ui/petdetail/petdetail.dart';
 import 'package:petshop/ui/petlist/petlist.dart';
 import 'package:petshop/values/image_list.dart';
 import 'package:petshop/values/values.dart';
@@ -61,38 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      bottomNavigationBar: Container(
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.only(
-              topRight: Radius.circular(25), topLeft: Radius.circular(25)),
-          boxShadow: [
-            BoxShadow(color: Colors.black38, spreadRadius: 0, blurRadius: 4),
-          ],
-        ),
-        child: ClipRRect(
-          borderRadius: const BorderRadius.only(
-            topLeft: Radius.circular(25.0),
-            topRight: Radius.circular(25.0),
-          ),
-          child: BottomNavigationBar(
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            type: BottomNavigationBarType.fixed,
-            selectedItemColor: ColorsList.textcolor,
-            iconSize: 30,
-            items: const <BottomNavigationBarItem>[
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.home_outlined), label: ('Home')),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.backpack_outlined), label: ('Cart')),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.note_alt_outlined), label: ('List')),
-              BottomNavigationBarItem(
-                  icon: Icon(Icons.person_outline), label: ('Account')),
-            ],
-          ),
-        ),
-      ),
+      bottomNavigationBar: const BottomNavBar(),
       body: SingleChildScrollView(
         child: Wrap(
           verticalDirection: VerticalDirection.down,
@@ -161,47 +132,173 @@ class _HomeScreenState extends State<HomeScreen> {
               child: Row(
                 children: [
                   const SizedBox(width: 10),
-                  RecommendedBox(
-                    title: "Havanese Dog",
-                    rating: 5,
-                    ratingt: "5.0",
-                    url: "assets/dog1.jpeg",
-                    color: ColorsList.primaryColor,
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    child: RecommendedBox(
+                      title: "Havanese Dog",
+                      rating: 5,
+                      ratingt: "5.0",
+                      url: "assets/dog1.jpeg",
+                      color: ColorsList.primaryColor,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PetDetail(
+                            title: 'Havanese Dog',
+                            age: "1 Years Old - Boys",
+                            price: "\$475",
+                            url: "assets/dog1.jpeg",
+                            ratingt: "5.0",
+                            rating: 5,
+                            key: UniqueKey(),
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                  RecommendedBox(
-                    title: "Bassador Dog",
-                    rating: 4,
-                    ratingt: "4.0",
-                    url: "assets/dog2.jpeg",
-                    color: Colors.indigo,
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    child: RecommendedBox(
+                      title: "Bassador Dog",
+                      rating: 4,
+                      ratingt: "4.0",
+                      url: "assets/dog2.jpeg",
+                      color: Colors.indigo,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PetDetail(
+                            title: 'Bassador Dog',
+                            age: "1 Years Old - Boys",
+                            price: "\$375",
+                            url: "assets/dog2.jpeg",
+                            ratingt: "4.0",
+                            rating: 4,
+                            key: UniqueKey(),
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                  RecommendedBox(
-                    title: "Persian Cat",
-                    rating: 5,
-                    ratingt: "5.0",
-                    url: "assets/cat1.jpeg",
-                    color: Colors.purpleAccent,
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    child: RecommendedBox(
+                      title: "Persian Cat",
+                      rating: 5,
+                      ratingt: "5.0",
+                      url: "assets/cat1.jpeg",
+                      color: Colors.purpleAccent,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PetDetail(
+                            title: 'Persian Cat',
+                            age: "1 Years Old - Girls",
+                            price: "\$250",
+                            url: "assets/cat1.jpeg",
+                            ratingt: "5.0",
+                            rating: 5,
+                            key: UniqueKey(),
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                  RecommendedBox(
-                    title: "Ragdoll Cat",
-                    rating: 4,
-                    ratingt: "4.0",
-                    url: "assets/cat2.jpeg",
-                    color: Colors.redAccent,
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    child: RecommendedBox(
+                      title: "Ragdoll Cat",
+                      rating: 4,
+                      ratingt: "4.0",
+                      url: "assets/cat2.jpeg",
+                      color: Colors.redAccent,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PetDetail(
+                            title: 'Ragdoll Cat',
+                            age: "1 Years Old - Girls",
+                            price: "\$280",
+                            url: "assets/cat2.jpeg",
+                            ratingt: "4.0",
+                            rating: 4,
+                            key: UniqueKey(),
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                  RecommendedBox(
-                    title: "Bengal  Cat",
-                    rating: 4,
-                    ratingt: "4.0",
-                    url: "assets/cat3.jpeg",
-                    color: Colors.green,
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    child: RecommendedBox(
+                      title: "Bengal  Cat",
+                      rating: 4,
+                      ratingt: "4.0",
+                      url: "assets/cat3.jpeg",
+                      color: Colors.green,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PetDetail(
+                            title: 'Bengal Cat',
+                            age: "1 Years Old - Boys",
+                            price: "\$220",
+                            url: "assets/cat3.jpeg",
+                            ratingt: "4.0",
+                            rating: 4,
+                            key: UniqueKey(),
+                          ),
+                        ),
+                      );
+                    },
                   ),
-                  RecommendedBox(
-                    title: "Bunny Rabbits",
-                    rating: 4,
-                    ratingt: "4.0",
-                    url: "assets/rabbit1.jpeg",
-                    color: Colors.blueAccent,
+                  InkWell(
+                    splashColor: Colors.transparent,
+                    hoverColor: Colors.transparent,
+                    highlightColor: Colors.transparent,
+                    child: RecommendedBox(
+                      title: "Bunny Rabbits",
+                      rating: 4,
+                      ratingt: "4.0",
+                      url: "assets/rabbit1.jpeg",
+                      color: Colors.blueAccent,
+                    ),
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => PetDetail(
+                            title: 'Bunny Rabbits',
+                            age: "1 Years Old - Boys",
+                            price: "\$150",
+                            url: "assets/rabbit1.jpeg",
+                            ratingt: "4.0",
+                            rating: 4,
+                            key: UniqueKey(),
+                          ),
+                        ),
+                      );
+                    },
                   ),
                   const SizedBox(width: 18),
                 ],
@@ -226,32 +323,95 @@ class _HomeScreenState extends State<HomeScreen> {
                 },
               ),
             ),
-            ListComponent(
-              title: 'Havanese Dog',
-              age: "1 Years Old",
-              price: "\$475",
-              url: "assets/dog1.jpeg",
-              ratingt: "5.0",
-              rating: 5,
-              key: UniqueKey(),
+            InkWell(
+              splashColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              child: ListComponent(
+                title: 'Havanese Dog',
+                age: "1 Years Old",
+                price: "\$475",
+                url: "assets/dog1.jpeg",
+                ratingt: "5.0",
+                rating: 5,
+                key: UniqueKey(),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PetDetail(
+                      title: 'Havanese Dog',
+                      age: "1 Years Old",
+                      price: "\$475",
+                      url: "assets/dog1.jpeg",
+                      ratingt: "5.0",
+                      rating: 5,
+                      key: UniqueKey(),
+                    ),
+                  ),
+                );
+              },
             ),
-            ListComponent(
-              title: 'Australian Dog',
-              age: "1 Years Old",
-              price: "\$350",
-              url: "assets/dog2.jpeg",
-              ratingt: "5.0",
-              rating: 5,
-              key: UniqueKey(),
+            InkWell(
+              splashColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              child: ListComponent(
+                title: 'Australian Dog',
+                age: "1 Years Old",
+                price: "\$350",
+                url: "assets/dog2.jpeg",
+                ratingt: "5.0",
+                rating: 5,
+                key: UniqueKey(),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PetDetail(
+                      title: 'Australian Dog',
+                      age: "1 Years Old",
+                      price: "\$350",
+                      url: "assets/dog2.jpeg",
+                      ratingt: "5.0",
+                      rating: 5,
+                      key: UniqueKey(),
+                    ),
+                  ),
+                );
+              },
             ),
-            ListComponent(
-              title: 'Havanese Cat',
-              age: "1 Years Old",
-              price: "\$235",
-              url: "assets/cat1.jpeg",
-              ratingt: "4.0",
-              rating: 4,
-              key: UniqueKey(),
+            InkWell(
+              splashColor: Colors.transparent,
+              hoverColor: Colors.transparent,
+              highlightColor: Colors.transparent,
+              child: ListComponent(
+                title: 'Havanese Cat',
+                age: "1 Years Old",
+                price: "\$235",
+                url: "assets/cat1.jpeg",
+                ratingt: "4.0",
+                rating: 4,
+                key: UniqueKey(),
+              ),
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => PetDetail(
+                      title: 'Havanese Cat',
+                      age: "1 Years Old",
+                      price: "\$235",
+                      url: "assets/cat1.jpeg",
+                      ratingt: "4.0",
+                      rating: 4,
+                      key: UniqueKey(),
+                    ),
+                  ),
+                );
+              },
             ),
             const SizedBox(height: 130),
           ],

@@ -1,13 +1,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:petshop/common_widgets/bottomnavbar.dart';
 import 'package:petshop/models/listcomponent.dart';
+import 'package:petshop/screens/screens_list.dart';
 import 'package:petshop/ui/categories.dart';
 import 'package:petshop/ui/homescreen/recommended.dart';
 import 'package:petshop/ui/petdetail/petdetail.dart';
-import 'package:petshop/ui/petlist/petlist.dart';
 import 'package:petshop/values/image_list.dart';
 import 'package:petshop/values/values.dart';
 
@@ -63,7 +64,6 @@ class _HomeScreenState extends State<HomeScreen> {
           )
         ],
       ),
-      bottomNavigationBar: const BottomNavBar(),
       body: SingleChildScrollView(
         child: Wrap(
           verticalDirection: VerticalDirection.down,
@@ -144,18 +144,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: ColorsList.primaryColor,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PetDetail(
-                            title: 'Havanese Dog',
-                            age: "1 Years Old - Boys",
-                            price: "\$475",
-                            url: "assets/dog1.jpeg",
-                            ratingt: "5.0",
-                            rating: 5,
-                            key: UniqueKey(),
-                          ),
+                      Get.to(
+                        () => PetDetail(
+                          title: 'Havanese Dog',
+                          age: "1 Years Old - Boys",
+                          price: "\$475",
+                          url: "assets/dog1.jpeg",
+                          ratingt: "5.0",
+                          rating: 5,
+                          key: UniqueKey(),
                         ),
                       );
                     },
@@ -172,18 +169,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.indigo,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PetDetail(
-                            title: 'Bassador Dog',
-                            age: "1 Years Old - Boys",
-                            price: "\$375",
-                            url: "assets/dog2.jpeg",
-                            ratingt: "4.0",
-                            rating: 4,
-                            key: UniqueKey(),
-                          ),
+                      Get.to(
+                        () => PetDetail(
+                          title: 'Bassador Dog',
+                          age: "1 Years Old - Boys",
+                          price: "\$375",
+                          url: "assets/dog2.jpeg",
+                          ratingt: "4.0",
+                          rating: 4,
+                          key: UniqueKey(),
                         ),
                       );
                     },
@@ -200,18 +194,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.purpleAccent,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PetDetail(
-                            title: 'Persian Cat',
-                            age: "1 Years Old - Girls",
-                            price: "\$250",
-                            url: "assets/cat1.jpeg",
-                            ratingt: "5.0",
-                            rating: 5,
-                            key: UniqueKey(),
-                          ),
+                      Get.to(
+                        () => PetDetail(
+                          title: 'Persian Cat',
+                          age: "1 Years Old - Girls",
+                          price: "\$250",
+                          url: "assets/cat1.jpeg",
+                          ratingt: "5.0",
+                          rating: 5,
+                          key: UniqueKey(),
                         ),
                       );
                     },
@@ -228,18 +219,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.redAccent,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PetDetail(
-                            title: 'Ragdoll Cat',
-                            age: "1 Years Old - Girls",
-                            price: "\$280",
-                            url: "assets/cat2.jpeg",
-                            ratingt: "4.0",
-                            rating: 4,
-                            key: UniqueKey(),
-                          ),
+                      Get.to(
+                        () => PetDetail(
+                          title: 'Ragdoll Cat',
+                          age: "1 Years Old - Girls",
+                          price: "\$280",
+                          url: "assets/cat2.jpeg",
+                          ratingt: "4.0",
+                          rating: 4,
+                          key: UniqueKey(),
                         ),
                       );
                     },
@@ -256,18 +244,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.green,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PetDetail(
-                            title: 'Bengal Cat',
-                            age: "1 Years Old - Boys",
-                            price: "\$220",
-                            url: "assets/cat3.jpeg",
-                            ratingt: "4.0",
-                            rating: 4,
-                            key: UniqueKey(),
-                          ),
+                      Get.to(
+                        () => PetDetail(
+                          title: 'Bengal Cat',
+                          age: "1 Years Old - Boys",
+                          price: "\$220",
+                          url: "assets/cat3.jpeg",
+                          ratingt: "4.0",
+                          rating: 4,
+                          key: UniqueKey(),
                         ),
                       );
                     },
@@ -284,18 +269,15 @@ class _HomeScreenState extends State<HomeScreen> {
                       color: Colors.blueAccent,
                     ),
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => PetDetail(
-                            title: 'Bunny Rabbits',
-                            age: "1 Years Old - Boys",
-                            price: "\$150",
-                            url: "assets/rabbit1.jpeg",
-                            ratingt: "4.0",
-                            rating: 4,
-                            key: UniqueKey(),
-                          ),
+                      Get.to(
+                        () => PetDetail(
+                          title: 'Bunny Rabbits',
+                          age: "1 Years Old - Boys",
+                          price: "\$150",
+                          url: "assets/rabbit1.jpeg",
+                          ratingt: "4.0",
+                          rating: 4,
+                          key: UniqueKey(),
                         ),
                       );
                     },
@@ -316,10 +298,7 @@ class _HomeScreenState extends State<HomeScreen> {
               trailing: InkWell(
                 child: const Text("See All"),
                 onTap: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(builder: (context) => const PetList()),
-                  );
+                  Get.to(() => Screens.newPetScreen);
                 },
               ),
             ),
@@ -337,18 +316,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 key: UniqueKey(),
               ),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PetDetail(
-                      title: 'Havanese Dog',
-                      age: "1 Years Old",
-                      price: "\$475",
-                      url: "assets/dog1.jpeg",
-                      ratingt: "5.0",
-                      rating: 5,
-                      key: UniqueKey(),
-                    ),
+                Get.to(
+                  () => PetDetail(
+                    title: 'Havanese Dog',
+                    age: "1 Years Old",
+                    price: "\$475",
+                    url: "assets/dog1.jpeg",
+                    ratingt: "5.0",
+                    rating: 5,
+                    key: UniqueKey(),
                   ),
                 );
               },
@@ -367,18 +343,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 key: UniqueKey(),
               ),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PetDetail(
-                      title: 'Australian Dog',
-                      age: "1 Years Old",
-                      price: "\$350",
-                      url: "assets/dog2.jpeg",
-                      ratingt: "5.0",
-                      rating: 5,
-                      key: UniqueKey(),
-                    ),
+                Get.to(
+                  () => PetDetail(
+                    title: 'Australian Dog',
+                    age: "1 Years Old",
+                    price: "\$350",
+                    url: "assets/dog2.jpeg",
+                    ratingt: "5.0",
+                    rating: 5,
+                    key: UniqueKey(),
                   ),
                 );
               },
@@ -397,18 +370,15 @@ class _HomeScreenState extends State<HomeScreen> {
                 key: UniqueKey(),
               ),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(
-                    builder: (context) => PetDetail(
-                      title: 'Havanese Cat',
-                      age: "1 Years Old",
-                      price: "\$235",
-                      url: "assets/cat1.jpeg",
-                      ratingt: "4.0",
-                      rating: 4,
-                      key: UniqueKey(),
-                    ),
+                Get.to(
+                  () => PetDetail(
+                    title: 'Havanese Cat',
+                    age: "1 Years Old",
+                    price: "\$235",
+                    url: "assets/cat1.jpeg",
+                    ratingt: "4.0",
+                    rating: 4,
+                    key: UniqueKey(),
                   ),
                 );
               },

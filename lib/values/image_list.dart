@@ -6,6 +6,7 @@ class ImageList {
   static const bird = "assets/bird.jpeg";
   static const rabbit = "assets/rabbit.jpeg";
   static const other = "assets/other.jpeg";
+  static const cart = "assets/cart.jpeg";
 
   ImageList._();
 }

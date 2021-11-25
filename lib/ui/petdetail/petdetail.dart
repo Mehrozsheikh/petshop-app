@@ -24,7 +24,21 @@ class PetDetail extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      extendBodyBehindAppBar: true,
       backgroundColor: Colors.white70,
+      appBar: AppBar(
+        leading: IconButton(
+          icon: const Icon(
+            Icons.arrow_back_ios_new,
+            size: 32,
+          ),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
+        elevation: 0.0,
+        backgroundColor: Colors.transparent,
+      ),
       body: Column(
         children: [
           Center(
@@ -38,22 +52,6 @@ class PetDetail extends StatelessWidget {
                 image: DecorationImage(
                   image: AssetImage(url),
                   alignment: Alignment.center,
-                ),
-              ),
-              child: InkWell(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: Container(
-                  alignment: Alignment.topLeft,
-                  child: const Padding(
-                    padding: EdgeInsets.only(top: 40.0, left: 20),
-                    child: Icon(
-                      Icons.arrow_back_rounded,
-                      color: Colors.black,
-                      size: 30,
-                    ),
-                  ),
                 ),
               ),
             ),

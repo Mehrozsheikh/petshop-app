@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:get/get_core/src/get_main.dart';
+import 'package:get/get_navigation/src/extension_navigation.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:petshop/common_widgets/bottomnavbar.dart';
 import 'package:petshop/models/listcomponent.dart';
 import 'package:petshop/models/listmodel.dart';
 import 'package:petshop/ui/petdetail/petdetail.dart';
@@ -296,9 +297,9 @@ class _PetListState extends State<PetList> {
           padding: const EdgeInsets.only(left: 12.0),
           child: InkWell(
             child: const Icon(
-              Icons.arrow_back,
+              Icons.arrow_back_ios_new,
               color: ColorsList.textcolor,
-              size: 30,
+              size: 27,
             ),
             onTap: () {
               Navigator.pop(context);
@@ -325,7 +326,6 @@ class _PetListState extends State<PetList> {
           )
         ],
       ),
-      bottomNavigationBar: const BottomNavBar(),
       body: Center(
         child: Column(
           children: [
@@ -367,18 +367,15 @@ class _PetListState extends State<PetList> {
                         key: UniqueKey(),
                       ),
                       onTap: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => PetDetail(
-                              title: listImages[index].title,
-                              age: listImages[index].age,
-                              price: listImages[index].price,
-                              url: listImages[index].url,
-                              ratingt: listImages[index].ratingt,
-                              rating: listImages[index].rating,
-                              key: UniqueKey(),
-                            ),
+                        Get.to(
+                          () => PetDetail(
+                            title: listImages[index].title,
+                            age: listImages[index].age,
+                            price: listImages[index].price,
+                            url: listImages[index].url,
+                            ratingt: listImages[index].ratingt,
+                            rating: listImages[index].rating,
+                            key: UniqueKey(),
                           ),
                         );
                       },

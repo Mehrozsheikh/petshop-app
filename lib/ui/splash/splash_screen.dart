@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:petshop/screens/screens_list.dart';
+import 'package:petshop/ui/screesn_nav/screen_nav.dart';
 import 'package:petshop/values/values.dart';
 
 class Splash extends StatefulWidget {
@@ -16,7 +16,7 @@ class Splash extends StatefulWidget {
 class _SplashState extends State<Splash> {
   @override
   void initState() {
-    Timer(const Duration(seconds: 3), () => Get.off(Screens.home));
+    Timer(const Duration(seconds: 3), () => Get.off(() => ScreenNav()));
 
     super.initState();
   }
